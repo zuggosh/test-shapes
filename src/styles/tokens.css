@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Test Shapes — "Noir & Gold" design system: tokens
+   Layer 1: primitives (raw palette). Layer 2: semantic tokens (use these).
+   Mirrored for the canvas in src/config/theme.ts.
+   ========================================================================== */
+
+:root {
+  /* ---- Primitives: gold ------------------------------------------------ */
+  --gold-50: #fbf5e1;
+  --gold-100: #f6e7b8;
+  --gold-200: #eed38a;
+  --gold-300: #e3bd5e;
+  --gold-400: #d4af37; /* brand gold */
+  --gold-500: #b8912a;
+  --gold-600: #94721f;
+  --gold-700: #6e5417;
+  --gold-800: #4a3910;
+  --gold-900: #2a2009;
+
+  /* ---- Primitives: ink (warm near-black) -------------------------------- */
+  --ink-950: #0a0907;
+  --ink-900: #110f0b;
+  --ink-850: #16130e;
+  --ink-800: #1c1812;
+  --ink-700: #262017;
+  --ink-600: #332b1f;
+  --ink-500: #4a4030;
+
+  /* ---- Primitives: sand (warm text) ------------------------------------- */
+  --sand-100: #f3ead3;
+  --sand-300: #cdbf9f;
+  --sand-500: #a89a7a;
+  --sand-700: #7a6f57;
+
+  /* ---- Semantic: surfaces ---------------------------------------------- */
+  --color-bg: var(--ink-950);
+  --color-bg-elevated: var(--ink-900);
+  --color-surface: var(--ink-800);
+  --color-surface-hover: var(--ink-700);
+  --color-surface-active: var(--ink-600);
+  --color-overlay: rgba(10, 9, 7, 0.72);
+
+  /* ---- Semantic: borders ----------------------------------------------- */
+  --color-border: rgba(212, 175, 55, 0.22);
+  --color-border-strong: rgba(212, 175, 55, 0.55);
+  --color-divider: rgba(212, 175, 55, 0.14);
+
+  /* ---- Semantic: text -------------------------------------------------- */
+  --color-text: var(--sand-100);
+  --color-text-muted: var(--sand-500);
+  --color-text-subtle: var(--sand-700);
+  --color-text-accent: var(--gold-300);
+
+  /* ---- Semantic: accent / interactive ---------------------------------- */
+  --color-accent: var(--gold-400);
+  --color-accent-hover: var(--gold-300);
+  --color-accent-active: var(--gold-500);
+  --color-accent-contrast: var(--ink-950);
+  --color-focus: var(--gold-200);
+  --color-disabled: var(--ink-600);
+  --color-disabled-text: var(--sand-700);
+
+  /* ---- Gradients -------------------------------------------------------- */
+  --gradient-gold: linear-gradient(135deg, var(--gold-100) 0%, var(--gold-400) 45%, var(--gold-600) 100%);
+  --gradient-gold-text: linear-gradient(180deg, var(--gold-100) 0%, var(--gold-300) 50%, var(--gold-500) 100%);
+  --gradient-stage: radial-gradient(120% 90% at 50% 0%, #1d1810 0%, #110f0b 55%, #0a0907 100%);
+  --gradient-page: radial-gradient(80% 60% at 50% -10%, rgba(212, 175, 55, 0.1) 0%, rgba(10, 9, 7, 0) 70%);
+
+  /* ---- Typography ------------------------------------------------------- */
+  --font-display: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --text-2xs: 0.6875rem; /* 11px */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-md: 1rem; /* 16px */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.5rem; /* 24px */
+  --text-2xl: 2rem; /* 32px */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --tracking-wide: 0.08em;
+  --tracking-caps: 0.14em;
+  --leading-tight: 1.15;
+  --leading-normal: 1.5;
+
+  /* ---- Spacing (4px grid) ---------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* ---- Radius ----------------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* ---- Elevation -------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 0 1px rgba(212, 175, 55, 0.18), 0 0 32px rgba(212, 175, 55, 0.08);
+  --shadow-inset: inset 0 1px 0 rgba(246, 231, 184, 0.08);
+
+  /* ---- Motion ----------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+
+  /* ---- Sizing ----------------------------------------------------------- */
+  --tap-target: 44px; /* minimum touch target (WCAG / Apple HIG) */
+  --container-max: 1040px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}
