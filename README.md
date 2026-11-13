@@ -16,7 +16,7 @@ npm run preview
 |---|---|
 | 1 | Responsive rectangle (`#stage`), canvas sized to it via `ResizeObserver` |
 | 2a–d | Shapes start fully above the top at a random X, fall, are removed once fully below the bottom |
-| 2e | Rectangle mask on the scene root (GPU scissor in v8) |
+| 2e | Rectangle mask on the scene root |
 | 2f | Gravity as acceleration `v += g·dt`, read each frame → changes apply instantly |
 | 2g | 1 shape/s by default, frame-time accumulator (no `setInterval`) |
 | 2h ★ | 7 types (3/4/5/6 sides, circle, ellipse, star), random colour, fixed at creation |

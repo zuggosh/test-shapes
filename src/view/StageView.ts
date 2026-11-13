@@ -61,7 +61,7 @@ export class StageView {
     this._height = height;
     this.app.renderer.resize(width, height);
     this.hitLayer.hitArea = new Rectangle(0, 0, width, height);
-    // Axis-aligned rect mask → PixiJS uses a GPU scissor test (practically free).
+    // Rectangle mask: hides shapes outside the play area (Fig. 1 — C).
     this.maskShape.clear().rect(0, 0, width, height).fill(THEME.color.white);
   }
 
